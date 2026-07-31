@@ -3,38 +3,31 @@
 // ── Year
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// ── Custom Cursor
-const dot  = document.getElementById('curDot');
-const ring = document.getElementById('curRing');
+// ── Custom Pointer Cursor (Zero Delay / Instant Tracking)
+const customCursor = document.getElementById('customCursor');
 
-if (dot && ring) {
-  document.addEventListener('mousemove', e => {
-    dot.style.transform  = `translate(${e.clientX - 3}px, ${e.clientY - 3}px)`;
-    ring.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
+if (customCursor) {
+  window.addEventListener('mousemove', e => {
+    // Instant 1:1 position update with zero transition delay
+    customCursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  }, { passive: true });
+
+  document.querySelectorAll('a, button, input, .lb-card').forEach(el => {
+    el.addEventListener('mouseenter', () => customCursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => customCursor.classList.remove('hover'));
   });
 
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-  });
-
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity = '0';
-    ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity = '1';
-    ring.style.opacity = '1';
-  });
+  document.addEventListener('mouseleave', () => { customCursor.style.opacity = '0'; });
+  document.addEventListener('mouseenter', () => { customCursor.style.opacity = '1'; });
 }
 
-// ── Header scroll state
+// ── Header Scroll State
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-// ── Scroll reveal
+// ── Scroll Reveal Observer
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
