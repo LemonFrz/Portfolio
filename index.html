@@ -1,403 +1,204 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LEMON1G — Graphic Design & Virtual Photography Studio inspired by Liberty Walk (LBWK) & Japanese JDM Car Culture. Forza Horizon 6 Japan, Liveries & Character Art." />
-  <title>LEMON1G · 自由歩行 — Graphic Design & Virtual Photography Studio</title>
-  
-  <!-- Fonts: Space Grotesk (Tech/Industrial), Oswald (Heavy Automotive Caps), Noto Sans JP (Authentic Japanese Typography) -->
+  <title>LEMON1G DESIGN STUDIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Oswald:wght@500;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@500;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Themed Pointer Cursor (Zero Delay) -->
+  <!-- Custom Cursor -->
   <div class="custom-cursor" id="customCursor" aria-hidden="true">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-svg">
-      <path d="M4.5 3L17.5 16L11.5 16.5L14.5 22L12 23L9 17.5L4.5 21.5V3Z" fill="#ffe600" stroke="#070709" stroke-width="1.5" stroke-linejoin="round"/>
-      <circle cx="4.5" cy="3" r="1.5" fill="#ff1e27"/>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="cursor-svg">
+      <path d="M4.5 3L17.5 16L11.5 16.5L14.5 22L12 23L9 17.5L4.5 21.5V3Z" fill="#000" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
     </svg>
   </div>
-
-  <!-- Background Grid & Atmospheric Noise -->
-  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
   <!-- ── NAV ── -->
   <header id="site-header">
     <nav class="nav container">
       <a href="#" class="nav-logo">
-        <span class="logo-kanji">自由歩行</span>
-        <span class="logo-text">LEMON<span class="brand-1g">1G</span></span>
-        <span class="logo-tag">DESIGN & PHOTO</span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:8px;">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+        L1G
       </a>
       <div class="nav-links">
-        <a href="#gallery"><span class="nav-kanji">画廊</span> GALLERY</a>
-        <a href="#services"><span class="nav-kanji">能力</span> SERVICES</a>
-        <a href="#about"><span class="nav-kanji">概要</span> ABOUT</a>
-        <a href="#contact"><span class="nav-kanji">連絡</span> CONTACT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#services">SERVICES</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </nav>
   </header>
 
   <main>
-
-    <!-- ── HERO (LBWK CREATIVE STAGE) ── -->
-    <section id="hero" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <div class="hero-stamps">
-            <span class="stamp-badge">GRAPHIC DESIGN</span>
-            <span class="stamp-badge stamp-yellow">LBWK VIBES</span>
-            <span class="stamp-badge">FH6 VIRTUAL PHOTO LAB</span>
-          </div>
-
-          <h1 class="hero-title">
-            <span class="hero-kanji">リバティーウォーク · デザイン</span>
-            AUTOMOTIVE DESIGN &<br/>
-            <span class="hero-yellow">VIRTUAL PHOTOGRAPHY</span>
-          </h1>
-
-          <p class="hero-sub">
-            Liberty Walk stance inspired graphic design, Forza Horizon 6 virtual photography in Japan, widebody vehicle liveries, and character illustrations with raw street attitude.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#gallery" class="btn-lbwk">
-              <span>EXPLORE GALLERY</span>
-              <span class="btn-arrow">→</span>
-            </a>
-            <div class="hero-spec-tag">
-              <span class="dot-live"></span> STUDIO: LEMON1G / JAPAN
-            </div>
-          </div>
-        </div>
-
-        <!-- Telemetry / Studio Spec Badge -->
-        <div class="hero-telemetry">
-          <div class="tele-box">
-            <span class="tele-label">STUDIO</span>
-            <span class="tele-val">LEMON1G DESIGN</span>
-          </div>
-          <div class="tele-box">
-            <span class="tele-label">STYLE</span>
-            <span class="tele-val">LBWK & JDM STANCE</span>
-          </div>
-          <div class="tele-box">
-            <span class="tele-label">FOCUS</span>
-            <span class="tele-val">DESIGN & VIRTUAL PHOTO</span>
-          </div>
-          <div class="tele-kanji-vert">クリエイティブアート</div>
-        </div>
-      </div>
-
-      <div class="scroll-hint" aria-hidden="true">
-        <span class="scroll-line"></span>
-        <span class="scroll-txt">SCROLL TO EXAMINE EXHIBITION</span>
-      </div>
+    <!-- ── HERO ── -->
+    <section id="hero" class="hero container">
+      <h1 class="hero-title">LEMON1G DESIGN STUDIO<br>特別展示</h1>
+      <span class="jp-subtitle" style="margin-bottom: 2rem;">2026.7.31<br>Shibuya-ku, Tokyo, Japan / Virtual Studio</span>
+      <p class="hero-sub">
+        Liberty Walk inspired graphic design, Forza Horizon 6 virtual photography, and bold character illustrations. Clean, minimal, high-impact aesthetic.
+      </p>
+      <a href="#gallery" class="btn-solid">EXPLORE GALLERY</a>
     </section>
 
-    <!-- ── LBWK RACING TICKER ── -->
-    <div class="marquee-wrap" aria-hidden="true">
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-wrap">
       <div class="marquee-track">
-        <span>GRAPHIC DESIGN</span><span class="sep">❖</span>
-        <span>VIRTUAL PHOTOGRAPHY</span><span class="sep">❖</span>
-        <span>FORZA HORIZON 6 JAPAN</span><span class="sep">❖</span>
-        <span>LB-WORKS STANCE CULTURE</span><span class="sep">❖</span>
-        <span>WIDEBODY LIVERY ART</span><span class="sep">❖</span>
-        <span>CHARACTER ILLUSTRATION</span><span class="sep">❖</span>
-        <span>自由歩行 デザイン & フォト</span><span class="sep">❖</span>
-        <span>VIRTUAL PHOTOGRAPHY</span><span class="sep">❖</span>
-        <span>FORZA HORIZON 6 JAPAN</span><span class="sep">❖</span>
+        <span>VIRTUAL PHOTOGRAPHY</span>
+        <span>GRAPHIC DESIGN</span>
+        <span>CHARACTER ILLUSTRATION</span>
+        <span>JDM CULTURE</span>
+        <span>VIRTUAL PHOTOGRAPHY</span>
+        <span>GRAPHIC DESIGN</span>
+        <span>CHARACTER ILLUSTRATION</span>
+        <span>JDM CULTURE</span>
       </div>
     </div>
 
-    <!-- ── GALLERY / ART EXHIBITION (ONE-PAGE FEED) ── -->
-    <section id="gallery" class="section garage-section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-kanji">作品展示 // ギャラリー</div>
-            <span class="section-label">SELECTED WORKS</span>
-            <h2 class="section-title">DESIGN & PHOTO EXHIBITION.</h2>
+    <!-- ── GALLERY ── -->
+    <section id="gallery" class="section container">
+      <h2 class="section-title">EXHIBITION</h2>
+      
+      <div class="garage-feed">
+        <!-- Item 1 -->
+        <article class="exhibit-card reveal">
+          <div class="exhibit-frame">
+            <img src="assets/images/cat1.png" alt="FYOUCAT LBWK Edition" class="exhibit-img" />
           </div>
-          <div class="section-badge-right">
-            <span>FULL HD SHOTS</span>
-            <span class="yellow-txt">COLLECTION 01 - 03</span>
-          </div>
-        </div>
-
-        <div class="garage-feed">
-
-          <!-- LB-EXHIBIT 01 -->
-          <article class="lb-card reveal">
-            <header class="lb-card__header">
-              <div class="lb-card__tagline-row">
-                <span class="lb-code">WORK // NO. 01</span>
-                <span class="lb-tag-yellow">FEATURED DESIGN</span>
-                <span class="lb-location">SHINJUKU, TOKYO · FH6</span>
-              </div>
-              <h3 class="lb-card__title">
-                FYOUCAT <span class="title-sub">LB-WORKS EDITION</span>
-              </h3>
-              <p class="lb-card__desc">Rebellious feline character illustration fused with aggressive LBWK widebody stance aesthetics.</p>
-            </header>
-
-            <div class="lb-card__frame">
-              <div class="frame-bar">
-                <span class="bar-dot red"></span>
-                <span class="bar-dot yellow"></span>
-                <span class="bar-dot green"></span>
-                <span class="bar-title">DESIGN_01_RAW_4K.PNG</span>
-              </div>
-              <img src="assets/images/cat1.png" alt="FYOUCAT LBWK Edition Full HD" loading="lazy" class="lb-img" />
-              <div class="frame-watermark">GRAPHIC DESIGN · LEMON1G</div>
+          <div class="exhibit-info">
+            <div class="exhibit-meta">NO. 01 / FEATURED DESIGN</div>
+            <h3 class="exhibit-title">FYOUCAT LB-WORKS</h3>
+            <p class="exhibit-desc">Rebellious feline character illustration fused with aggressive LBWK widebody stance aesthetics.</p>
+            <div class="exhibit-specs">
+              <div class="spec-row"><span class="spec-key">Category</span><span class="spec-val">Graphic Design</span></div>
+              <div class="spec-row"><span class="spec-key">Software</span><span class="spec-val">Photoshop</span></div>
+              <div class="spec-row"><span class="spec-key">Style</span><span class="spec-val">Stance / Contrast</span></div>
             </div>
+          </div>
+        </article>
 
-            <footer class="lb-card__footer">
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">DESIGN CONCEPT</span>
-                <p>The flagship design embodying pure defiance and street attitude. Inspired by Liberty Walk's signature philosophy mixed with raw, unfiltered character expression. High-contrast artwork designed for widebody liveries, stickers, and digital displays.</p>
-              </div>
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">TECHNICAL SPECIFICATIONS</span>
-                <div class="spec-table">
-                  <div class="spec-row">
-                    <span class="spec-key">Category:</span>
-                    <span class="spec-val">Graphic Design & Livery Art</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Software:</span>
-                    <span class="spec-val">Adobe Photoshop / FH6 Photo Mode</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Style:</span>
-                    <span class="spec-val">LB-Works Stance / High Contrast</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Tags:</span>
-                    <div class="lb-tags">
-                      <span class="tag">ILLUSTRATION</span>
-                      <span class="tag">LBWK</span>
-                      <span class="tag">LIVERY</span>
-                      <span class="tag">JDM</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          </article>
-
-          <!-- LB-EXHIBIT 02 -->
-          <article class="lb-card reveal">
-            <header class="lb-card__header">
-              <div class="lb-card__tagline-row">
-                <span class="lb-code">WORK // NO. 02</span>
-                <span class="lb-location">DAIKOKU PA · YOKOHAMA</span>
-              </div>
-              <h3 class="lb-card__title">
-                SILLY CAT <span class="title-sub">DAIKOKU NIGHT RUN</span>
-              </h3>
-              <p class="lb-card__desc">Derpy tongue-out character capture under neon streetlights — pure unfiltered Japanese car meet vibes.</p>
-            </header>
-
-            <div class="lb-card__frame">
-              <div class="frame-bar">
-                <span class="bar-dot red"></span>
-                <span class="bar-dot yellow"></span>
-                <span class="bar-dot green"></span>
-                <span class="bar-title">DAIKOKU_NIGHT_RUN_4K.PNG</span>
-              </div>
-              <img src="assets/images/cat2.png" alt="Silly Cat Daikoku Nights Full HD" loading="lazy" class="lb-img" />
-              <div class="frame-watermark">VIRTUAL PHOTO · LEMON1G</div>
+        <!-- Item 2 -->
+        <article class="exhibit-card reveal">
+          <div class="exhibit-frame">
+            <img src="assets/images/cat2.png" alt="Silly Cat Daikoku" class="exhibit-img" />
+          </div>
+          <div class="exhibit-info">
+            <div class="exhibit-meta">NO. 02 / VIRTUAL PHOTO</div>
+            <h3 class="exhibit-title">SILLY CAT DAIKOKU</h3>
+            <p class="exhibit-desc">Derpy tongue-out character capture under neon streetlights — pure unfiltered Japanese car meet vibes.</p>
+            <div class="exhibit-specs">
+              <div class="spec-row"><span class="spec-key">Category</span><span class="spec-val">Virtual Photography</span></div>
+              <div class="spec-row"><span class="spec-key">Location</span><span class="spec-val">FH6 Japan</span></div>
+              <div class="spec-row"><span class="spec-key">Tone</span><span class="spec-val">Night Run</span></div>
             </div>
+          </div>
+        </article>
 
-            <footer class="lb-card__footer">
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">DESIGN CONCEPT</span>
-                <p>Capturing the authentic night atmosphere of Daikoku Parking Area at 2 AM. Blending realistic lighting, camera lens blur, and vibrant colors with comedic character design that pops against dark asphalt backgrounds.</p>
-              </div>
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">TECHNICAL SPECIFICATIONS</span>
-                <div class="spec-table">
-                  <div class="spec-row">
-                    <span class="spec-key">Category:</span>
-                    <span class="spec-val">Virtual Photography & Character</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Location:</span>
-                    <span class="spec-val">Forza Horizon 6 Japan Map</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Tone:</span>
-                    <span class="spec-val">Derpy Bliss / Tokyo Street</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Tags:</span>
-                    <div class="lb-tags">
-                      <span class="tag">SILLY</span>
-                      <span class="tag">DAIKOKU</span>
-                      <span class="tag">PHOTO</span>
-                      <span class="tag">VP</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          </article>
-
-          <!-- LB-EXHIBIT 03 -->
-          <article class="lb-card reveal">
-            <header class="lb-card__header">
-              <div class="lb-card__tagline-row">
-                <span class="lb-code">WORK // NO. 03</span>
-                <span class="lb-location">HAKONE TOUGE · MOUNTAIN PASS</span>
-              </div>
-              <h3 class="lb-card__title">
-                NERD CAT <span class="title-sub">HAKONE SPEC</span>
-              </h3>
-              <p class="lb-card__desc">Feline intellectualism perched with glasses — "WeLL aKsHuALLy" precision graphic artwork.</p>
-            </header>
-
-            <div class="lb-card__frame">
-              <div class="frame-bar">
-                <span class="bar-dot red"></span>
-                <span class="bar-dot yellow"></span>
-                <span class="bar-dot green"></span>
-                <span class="bar-title">HAKONE_SPEC_NERDCAT_4K.PNG</span>
-              </div>
-              <img src="assets/images/cat3.png" alt="Nerd Cat Hakone Spec Full HD" loading="lazy" class="lb-img" />
-              <div class="frame-watermark">GRAPHIC ART · LEMON1G</div>
+        <!-- Item 3 -->
+        <article class="exhibit-card reveal">
+          <div class="exhibit-frame">
+            <img src="assets/images/cat3.png" alt="Nerd Cat Hakone" class="exhibit-img" />
+          </div>
+          <div class="exhibit-info">
+            <div class="exhibit-meta">NO. 03 / GRAPHIC ART</div>
+            <h3 class="exhibit-title">NERD CAT HAKONE</h3>
+            <p class="exhibit-desc">Feline intellectualism perched with glasses — "WeLL aKsHuALLy" precision graphic artwork.</p>
+            <div class="exhibit-specs">
+              <div class="spec-row"><span class="spec-key">Category</span><span class="spec-val">Character Design</span></div>
+              <div class="spec-row"><span class="spec-key">Setup</span><span class="spec-val">Vector / Raster</span></div>
+              <div class="spec-row"><span class="spec-key">Vibe</span><span class="spec-val">Telemetry Judge</span></div>
             </div>
-
-            <footer class="lb-card__footer">
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">DESIGN CONCEPT</span>
-                <p>Inspired by precision Touge telemetry and analytical racing culture. Nerd Cat judges your line through the hairpin turn with complete analytical superiority. Designed with crisp vector details and nerdy automotive flair.</p>
-              </div>
-              <div class="lb-card__spec-col">
-                <span class="spec-heading">TECHNICAL SPECIFICATIONS</span>
-                <div class="spec-table">
-                  <div class="spec-row">
-                    <span class="spec-key">Category:</span>
-                    <span class="spec-val">Character Design & Digital Art</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Setup:</span>
-                    <span class="spec-val">Precision Vector & Raster Art</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Vibe:</span>
-                    <span class="spec-val">Analytical Telemetry Judge</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-key">Tags:</span>
-                    <div class="lb-tags">
-                      <span class="tag">SMART</span>
-                      <span class="tag">NERD</span>
-                      <span class="tag">GLASSES</span>
-                      <span class="tag">GRAPHIC</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          </article>
-
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- ── SERVICES / CREATIVE CAPABILITIES ── -->
-    <section id="services" class="section specs-section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-kanji">提供サービス // 能力</div>
-            <span class="section-label">STUDIO SERVICES</span>
-            <h2 class="section-title">CREATIVE CAPABILITIES.</h2>
-          </div>
+    <!-- ── SERVICES ── -->
+    <section id="services" class="section container">
+      <h2 class="section-title">SERVICES</h2>
+      <div class="services-grid">
+        <div class="service-item reveal">
+          <span class="service-num">01</span>
+          <h4 class="service-title">VIRTUAL PHOTOGRAPHY</h4>
+          <p class="service-desc">Forza Horizon 6 Japan photo mode, custom lighting, camera angles, color grading, and automotive stance captures.</p>
         </div>
-
-        <div class="specs-grid">
-          <div class="spec-box reveal">
-            <span class="box-num">01</span>
-            <h4 class="box-title">VIRTUAL PHOTOGRAPHY</h4>
-            <p class="box-desc">Forza Horizon 6 Japan photo mode, custom lighting, camera angles, color grading, and automotive stance captures.</p>
-          </div>
-
-          <div class="spec-box reveal">
-            <span class="box-num">02</span>
-            <h4 class="box-title">AUTOMOTIVE LIVERY DESIGN</h4>
-            <p class="box-desc">Liberty Walk inspired vinyl liveries, sponsor placement, Japanese typography, and custom vehicle graphics.</p>
-          </div>
-
-          <div class="spec-box reveal">
-            <span class="box-num">03</span>
-            <h4 class="box-title">CHARACTER ILLUSTRATION</h4>
-            <p class="box-desc">High-impact character art with expression and attitude, designed for liveries, apparel, and digital media.</p>
-          </div>
-
-          <div class="spec-box reveal">
-            <span class="box-num">04</span>
-            <h4 class="box-title">BRANDING & GRAPHIC DESIGN</h4>
-            <p class="box-desc">Industrial JDM visual identity, typography, stickers, poster art, and digital creative direction.</p>
-          </div>
+        <div class="service-item reveal">
+          <span class="service-num">02</span>
+          <h4 class="service-title">LIVERY DESIGN</h4>
+          <p class="service-desc">Liberty Walk inspired vinyl liveries, sponsor placement, Japanese typography, and custom vehicle graphics.</p>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">03</span>
+          <h4 class="service-title">ILLUSTRATION</h4>
+          <p class="service-desc">High-impact character art with expression and attitude, designed for liveries, apparel, and digital media.</p>
         </div>
       </div>
     </section>
-
-    <!-- ── ABOUT (LEMON1G BRAND PROFILE) ── -->
-    <section id="about" class="section about-section">
-      <div class="container about-inner">
-        <div class="about-left reveal">
-          <div class="section-kanji">デザイナーについて</div>
-          <span class="section-label">ABOUT THE DESIGNER</span>
-          <h2 class="section-title">LEMON<span class="brand-1g">1G</span><br/><span class="yellow-txt">STUDIO.</span></h2>
-        </div>
-        <div class="about-right reveal">
-          <p class="lead-text">A graphic design & virtual photography brand inspired by Japanese car culture, Liberty Walk stance, and character art with attitude.</p>
-          <p>I am <strong>LEMON<span class="brand-1g">1G</span></strong> — a graphic designer and virtual photographer. I don't repair cars or run a mechanic garage — I build high-impact visual artwork, widebody liveries, character graphics, and virtual photography captures set in Forza Horizon 6 Japan.</p>
-          <p>From the neon-lit highways of Tokyo to Daikoku PA car meets, every piece is created with passion, precision, and bold stance aesthetics.</p>
-
-          <div class="garage-tags-row">
-            <span class="g-tag">GRAPHIC DESIGN</span>
-            <span class="g-tag">VIRTUAL PHOTOGRAPHY</span>
-            <span class="g-tag">FH6 JAPAN PHOTO MODE</span>
-            <span class="g-tag">LBWK STANCE CULTURE</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACT (CREATIVE INQUIRIES CTA) ── -->
-    <section id="contact" class="section contact-section">
-      <div class="container reveal">
-        <div class="section-kanji">お問い合わせ // お気軽にどうぞ</div>
-        <span class="section-label">WORK INQUIRIES // COMMISSIONS</span>
-        <h2 class="contact-title">START A PROJECT WITH<br/><span class="yellow-txt">LEMON1G.</span></h2>
-        <p class="contact-sub">Available for freelance graphic design, automotive livery commissions, virtual photography, and creative collaborations.</p>
-        <a href="mailto:hello@lemon1g.com" class="btn-lbwk btn-large">
-          <span>GET IN TOUCH</span>
-          <span class="btn-arrow">→</span>
-        </a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ── FOOTER ── -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <span class="footer-logo">🍋 LEMON<span class="brand-1g">1G</span></span>
-        <span class="footer-sub">GRAPHIC DESIGN & VIRTUAL PHOTOGRAPHY STUDIO</span>
+  <!-- ── FOOTER (MATCHING SCREENSHOT) ── -->
+  <footer class="footer" id="about">
+    <div class="container">
+      <div class="footer-nav">
+        <a href="#gallery">GALLERY</a> <span class="div">|</span>
+        <a href="#services">SERVICES</a> <span class="div">|</span>
+        <a href="#about">ABOUT</a> <span class="div">|</span>
+        <a href="#contact">CONTACT</a>
       </div>
-      <div class="footer-right">
-        <span class="footer-copy">© <span id="yr"></span> LEMON1G. ALL RIGHTS RESERVED. · 自由歩行</span>
+
+      <div class="footer-giant-logo">
+        LEMON1G STUDIO®
+      </div>
+
+      <div class="footer-address">
+        <p style="font-weight:700;">LEMON1G Headquarters</p>
+        <p>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Shibuya-ku, Tokyo, Japan / Digital Space
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          10:00 - 19:00
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Closed on Mon. & Tue.
+        </p>
+      </div>
+
+      <div class="hours-table-wrap" id="contact">
+        <div class="hours-title">OPEN HOURS</div>
+        <table class="hours-table">
+          <tr><td>Sunday</td><td>10AM - 7PM</td></tr>
+          <tr><td>Monday</td><td>CLOSE</td></tr>
+          <tr><td>Tuesday</td><td>CLOSE</td></tr>
+          <tr><td>Wednesday</td><td>10AM - 7PM</td></tr>
+          <tr><td>Thursday</td><td>10AM - 7PM</td></tr>
+          <tr><td>Friday</td><td>10AM - 7PM</td></tr>
+          <tr><td>Saturday</td><td>10AM - 7PM</td></tr>
+        </table>
+      </div>
+
+      <div class="social-icons">
+        <a href="#" class="social-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="social-circle">
+          <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+        </a>
+        <a href="mailto:hello@lemon1g.com" class="social-circle">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        COPYRIGHT LEMON1G DESIGN STUDIO ©2026
       </div>
     </div>
   </footer>
