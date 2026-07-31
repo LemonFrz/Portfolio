@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Cat - Project Details</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/project-detail.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">🍋 Lemon1g</a>
+        </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="project-detail">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+            <!-- Project Hero -->
+            <section class="project-hero">
+                <div class="project-preview-large">
+                    <img src="../assets/images/cat2.png" alt="Silly Cat Preview">
+                </div>
+                <div class="project-info">
+                    <h1 class="project-title-large">Silly Cat</h1>
+                    <p class="project-tagline">Derpy cat with tongue out - pure silly energy</p>
+                    <div class="tags">
+                        <span class="tag">Bleh</span>
+                        <span class="tag">Silly</span>
+                        <span class="tag">Cute</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Description -->
+            <section class="project-description">
+                <h2>About This Project</h2>
+                <p>Silly Cat captures that perfect moment of pure derpy bliss - tongue out, eyes crossed, living their
+                    best life. This illustration celebrates the goofy, unfiltered moments that make cats so endearing.
+                </p>
+                <p>Created with Adobe Photoshop, this piece focuses on realistic texture and expression while
+                    maintaining a playful, humorous tone. Perfect for meme culture and anyone who loves silly cat
+                    content.</p>
+
+                <h3>Design Process</h3>
+                <ul>
+                    <li><strong>Concept:</strong> Captured spontaneous silly cat moments for inspiration</li>
+                    <li><strong>Photography:</strong> Used reference photos of cats mid-derp</li>
+                    <li><strong>Details:</strong> Emphasized the tongue texture and goofy expression</li>
+                    <li><strong>Final Polish:</strong> Enhanced colors to make the image pop</li>
+                </ul>
+            </section>
+
+            <!-- File Information & Downloads -->
+            <section class="file-downloads">
+                <h2>Download Files</h2>
+                <div class="download-cards">
+                    <!-- PSD Download -->
+                    <div class="download-card">
+                        <div class="file-icon psd">PSD</div>
+                        <div class="file-info">
+                            <h3>Photoshop File</h3>
+                            <p class="file-size">12.4 MB</p>
+                            <p class="file-specs">3000 × 3000 px • RGB • Layered</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.psd')">
+                            <span>Download PSD</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- PNG Download -->
+                    <div class="download-card">
+                        <div class="file-icon png">PNG</div>
+                        <div class="file-info">
+                            <h3>High-Res PNG</h3>
+                            <p class="file-size">2.8 MB</p>
+                            <p class="file-specs">3000 × 3000 px • Transparent</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.png')">
+                            <span>Download PNG</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- JPG Download -->
+                    <div class="download-card">
+                        <div class="file-icon jpg">JPG</div>
+                        <div class="file-info">
+                            <h3>Optimized JPG</h3>
+                            <p class="file-size">1.2 MB</p>
+                            <p class="file-specs">3000 × 3000 px • RGB</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.jpg')">
+                            <span>Download JPG</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="license-info">
+                    <h3>📄 License</h3>
+                    <p>Free for personal use. Commercial use requires attribution.</p>
+                </div>
+            </section>
+
+            <!-- Back Button -->
+            <div class="back-to-portfolio">
+                <a href="../index.html" class="cta-button">← Back to Portfolio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Button -->
+    <button id="chaos-btn" class="chaos-button">CHAOS<br>MODE</button>
+
+    <!-- Load Modules sequentially -->
+    <script src="../assets/js/modules/cursor.js"></script>
+    <script src="../assets/js/modules/particles.js"></script>
+    <script src="../assets/js/modules/ball.js"></script>
+    <script src="../assets/js/modules/ui.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Download functionality
+        function downloadFile(filename) {
+            // In production, this would trigger actual download
+            // For now, show alert
+            alert(`Download started: ${filename}\n\nNote: Add actual files to /assets/downloads/ folder for real downloads.`);
+
+            // Example of how to trigger download with actual file:
+            // const link = document.createElement('a');
+            // link.href = '../assets/downloads/' + filename;
+            // link.download = filename;
+            // link.click();
+        }
+    </script>
+</body>
+
+</html>

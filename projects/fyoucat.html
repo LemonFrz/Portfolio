@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYOUCAT - Project Details</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/project-detail.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">🍋 Lemon1g</a>
+        </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="project-detail">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+            <!-- Project Hero -->
+            <section class="project-hero">
+                <div class="project-preview-large">
+                    <img src="../assets/images/cat1.png" alt="FYOUCAT Preview">
+                </div>
+                <div class="project-info">
+                    <h1 class="project-title-large">FYOUCAT</h1>
+                    <p class="project-tagline">Rebellious cat with attitude - Self explanatory</p>
+                    <div class="tags">
+                        <span class="tag">Kitty</span>
+                        <span class="tag">Rude</span>
+                        <span class="tag">Iconic</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Description -->
+            <section class="project-description">
+                <h2>About This Project</h2>
+                <p>FYOUCAT is the ultimate expression of feline sass and rebellion. This iconic middle-finger cat
+                    perfectly captures that "I don't care what you think" energy that cat owners know all too well. It's
+                    bold, it's unapologetic, and it's relatable AF.</p>
+                <p>Created using Adobe Photoshop, this piece combines realistic cat photography with bold graphic
+                    design. The yellow middle finger contrasts perfectly with the monochrome cat, making a statement
+                    that's impossible to ignore. Perfect for stickers, t-shirts, and anyone who appreciates cats with
+                    attitude.</p>
+
+                <h3>Design Process</h3>
+                <ul>
+                    <li><strong>Concept:</strong> Captured the perfect sassy cat expression as the foundation</li>
+                    <li><strong>Bold Statement:</strong> Added the iconic yellow middle finger gesture for impact</li>
+                    <li><strong>Color Choice:</strong> Used high-contrast yellow to make the message unmissable</li>
+                    <li><strong>Final Polish:</strong> Refined edges and added subtle glow for that perfect finish</li>
+                </ul>
+            </section>
+
+            <!-- File Information & Downloads -->
+            <section class="file-downloads">
+                <h2>Download Files</h2>
+                <div class="download-cards">
+                    <!-- PSD Download -->
+                    <div class="download-card">
+                        <div class="file-icon psd">PSD</div>
+                        <div class="file-info">
+                            <h3>Photoshop File</h3>
+                            <p class="file-size">12.4 MB</p>
+                            <p class="file-specs">3000 × 3000 px • RGB • Layered</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.psd')">
+                            <span>Download PSD</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- PNG Download -->
+                    <div class="download-card">
+                        <div class="file-icon png">PNG</div>
+                        <div class="file-info">
+                            <h3>High-Res PNG</h3>
+                            <p class="file-size">2.8 MB</p>
+                            <p class="file-specs">3000 × 3000 px • Transparent</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.png')">
+                            <span>Download PNG</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- JPG Download -->
+                    <div class="download-card">
+                        <div class="file-icon jpg">JPG</div>
+                        <div class="file-info">
+                            <h3>Optimized JPG</h3>
+                            <p class="file-size">1.2 MB</p>
+                            <p class="file-specs">3000 × 3000 px • RGB</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadFile('fyoucat.jpg')">
+                            <span>Download JPG</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 13L5 8h3V3h4v5h3l-5 5z" fill="currentColor" />
+                                <path d="M3 15h14v2H3v-2z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="license-info">
+                    <h3>📄 License</h3>
+                    <p>Free for personal use. Commercial use requires attribution.</p>
+                </div>
+            </section>
+
+            <!-- Back Button -->
+            <div class="back-to-portfolio">
+                <a href="../index.html" class="cta-button">← Back to Portfolio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Button -->
+    <button id="chaos-btn" class="chaos-button">CHAOS<br>MODE</button>
+
+    <!-- Load Modules sequentially -->
+    <script src="../assets/js/modules/cursor.js"></script>
+    <script src="../assets/js/modules/particles.js"></script>
+    <script src="../assets/js/modules/ball.js"></script>
+    <script src="../assets/js/modules/ui.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Download functionality
+        function downloadFile(filename) {
+            // In production, this would trigger actual download
+            // For now, show alert
+            alert(`Download started: ${filename}\n\nNote: Add actual files to /assets/downloads/ folder for real downloads.`);
+
+            // Example of how to trigger download with actual file:
+            // const link = document.createElement('a');
+            // link.href = '../assets/downloads/' + filename;
+            // link.download = filename;
+            // link.click();
+        }
+    </script>
+</body>
+
+</html>
