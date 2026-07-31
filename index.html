@@ -13,8 +13,8 @@
 
   <!-- Custom Cursor -->
   <div class="custom-cursor" id="customCursor" aria-hidden="true">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="cursor-svg">
-      <path d="M4.5 3L17.5 16L11.5 16.5L14.5 22L12 23L9 17.5L4.5 21.5V3Z" fill="#000" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="cursor-svg">
+      <path d="M4.5 3L17.5 16L11.5 16.5L14.5 22L12 23L9 17.5L4.5 21.5V3Z" fill="#ffe600" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
     </svg>
   </div>
 
@@ -22,14 +22,10 @@
   <header id="site-header">
     <nav class="nav container">
       <a href="#" class="nav-logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:8px;">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
-        </svg>
-        L1G
+        LEMON<span class="brand-1g">1G</span>
       </a>
       <div class="nav-links">
         <a href="#gallery">GALLERY</a>
-        <a href="#services">SERVICES</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
       </div>
@@ -39,7 +35,7 @@
   <main>
     <!-- ── HERO ── -->
     <section id="hero" class="hero container">
-      <h1 class="hero-title">LEMON1G DESIGN STUDIO<br>特別展示</h1>
+      <h1 class="hero-title">LEMON<span class="brand-1g">1G</span> DESIGN STUDIO<br>特別展示</h1>
       <span class="jp-subtitle" style="margin-bottom: 2rem;">2026.7.31<br>Shibuya-ku, Tokyo, Japan / Virtual Studio</span>
       <p class="hero-sub">
         Liberty Walk inspired graphic design, Forza Horizon 6 virtual photography, and bold character illustrations. Clean, minimal, high-impact aesthetic.
@@ -50,6 +46,16 @@
     <!-- ── MARQUEE ── -->
     <div class="marquee-wrap">
       <div class="marquee-track">
+        <!-- We duplicate the set twice to ensure a seamless 50% loop -->
+        <span>VIRTUAL PHOTOGRAPHY</span>
+        <span>GRAPHIC DESIGN</span>
+        <span>CHARACTER ILLUSTRATION</span>
+        <span>JDM CULTURE</span>
+        <span>VIRTUAL PHOTOGRAPHY</span>
+        <span>GRAPHIC DESIGN</span>
+        <span>CHARACTER ILLUSTRATION</span>
+        <span>JDM CULTURE</span>
+        
         <span>VIRTUAL PHOTOGRAPHY</span>
         <span>GRAPHIC DESIGN</span>
         <span>CHARACTER ILLUSTRATION</span>
@@ -68,8 +74,18 @@
       <div class="garage-feed">
         <!-- Item 1 -->
         <article class="exhibit-card reveal">
-          <div class="exhibit-frame">
-            <img src="assets/images/cat1.png" alt="FYOUCAT LBWK Edition" class="exhibit-img" />
+          <div class="exhibit-frame-wrap">
+            <div class="frame-bar">
+              <div class="mac-dots">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+              </div>
+              <span class="bar-title">DESIGN_01_RAW_4K.PNG</span>
+            </div>
+            <div class="exhibit-frame">
+              <img src="assets/images/cat1.png" alt="FYOUCAT LBWK Edition" class="exhibit-img" />
+            </div>
           </div>
           <div class="exhibit-info">
             <div class="exhibit-meta">NO. 01 / FEATURED DESIGN</div>
@@ -85,8 +101,18 @@
 
         <!-- Item 2 -->
         <article class="exhibit-card reveal">
-          <div class="exhibit-frame">
-            <img src="assets/images/cat2.png" alt="Silly Cat Daikoku" class="exhibit-img" />
+          <div class="exhibit-frame-wrap">
+            <div class="frame-bar">
+              <div class="mac-dots">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+              </div>
+              <span class="bar-title">DAIKOKU_NIGHT_RUN.PNG</span>
+            </div>
+            <div class="exhibit-frame">
+              <img src="assets/images/cat2.png" alt="Silly Cat Daikoku" class="exhibit-img" />
+            </div>
           </div>
           <div class="exhibit-info">
             <div class="exhibit-meta">NO. 02 / VIRTUAL PHOTO</div>
@@ -102,8 +128,18 @@
 
         <!-- Item 3 -->
         <article class="exhibit-card reveal">
-          <div class="exhibit-frame">
-            <img src="assets/images/cat3.png" alt="Nerd Cat Hakone" class="exhibit-img" />
+          <div class="exhibit-frame-wrap">
+            <div class="frame-bar">
+              <div class="mac-dots">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+              </div>
+              <span class="bar-title">HAKONE_SPEC_NERDCAT.PNG</span>
+            </div>
+            <div class="exhibit-frame">
+              <img src="assets/images/cat3.png" alt="Nerd Cat Hakone" class="exhibit-img" />
+            </div>
           </div>
           <div class="exhibit-info">
             <div class="exhibit-meta">NO. 03 / GRAPHIC ART</div>
@@ -119,27 +155,6 @@
       </div>
     </section>
 
-    <!-- ── SERVICES ── -->
-    <section id="services" class="section container">
-      <h2 class="section-title">SERVICES</h2>
-      <div class="services-grid">
-        <div class="service-item reveal">
-          <span class="service-num">01</span>
-          <h4 class="service-title">VIRTUAL PHOTOGRAPHY</h4>
-          <p class="service-desc">Forza Horizon 6 Japan photo mode, custom lighting, camera angles, color grading, and automotive stance captures.</p>
-        </div>
-        <div class="service-item reveal">
-          <span class="service-num">02</span>
-          <h4 class="service-title">LIVERY DESIGN</h4>
-          <p class="service-desc">Liberty Walk inspired vinyl liveries, sponsor placement, Japanese typography, and custom vehicle graphics.</p>
-        </div>
-        <div class="service-item reveal">
-          <span class="service-num">03</span>
-          <h4 class="service-title">ILLUSTRATION</h4>
-          <p class="service-desc">High-impact character art with expression and attitude, designed for liveries, apparel, and digital media.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ── FOOTER (MATCHING SCREENSHOT) ── -->
@@ -147,13 +162,12 @@
     <div class="container">
       <div class="footer-nav">
         <a href="#gallery">GALLERY</a> <span class="div">|</span>
-        <a href="#services">SERVICES</a> <span class="div">|</span>
         <a href="#about">ABOUT</a> <span class="div">|</span>
-        <a href="#contact">CONTACT</a>
+        <a href="#contact" id="contact">CONTACT</a>
       </div>
 
       <div class="footer-giant-logo">
-        LEMON1G STUDIO®
+        LEMON<span class="brand-1g">1G</span> STUDIO®
       </div>
 
       <div class="footer-address">
@@ -162,27 +176,6 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           Shibuya-ku, Tokyo, Japan / Digital Space
         </p>
-        <p>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          10:00 - 19:00
-        </p>
-        <p>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-          Closed on Mon. & Tue.
-        </p>
-      </div>
-
-      <div class="hours-table-wrap" id="contact">
-        <div class="hours-title">OPEN HOURS</div>
-        <table class="hours-table">
-          <tr><td>Sunday</td><td>10AM - 7PM</td></tr>
-          <tr><td>Monday</td><td>CLOSE</td></tr>
-          <tr><td>Tuesday</td><td>CLOSE</td></tr>
-          <tr><td>Wednesday</td><td>10AM - 7PM</td></tr>
-          <tr><td>Thursday</td><td>10AM - 7PM</td></tr>
-          <tr><td>Friday</td><td>10AM - 7PM</td></tr>
-          <tr><td>Saturday</td><td>10AM - 7PM</td></tr>
-        </table>
       </div>
 
       <div class="social-icons">
@@ -195,10 +188,6 @@
         <a href="mailto:hello@lemon1g.com" class="social-circle">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
-      </div>
-
-      <div class="footer-copy">
-        COPYRIGHT LEMON1G DESIGN STUDIO ©2026
       </div>
     </div>
   </footer>

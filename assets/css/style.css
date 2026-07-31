@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────
    LEMON1G PORTFOLIO — Clean LBWK Editorial Minimalist Style
-   Color Palette: Pure White (#ffffff), Stark Black (#000000)
+   Color Palette: Pure White (#ffffff), Stark Black (#000000), Lemon Accent (#ffe600)
    ───────────────────────────────────────────── */
 
 /* ── Reset & Base ── */
@@ -20,8 +20,8 @@
   --text-soft:    #888888;
   --border:       #000000;
   --border-soft:  #e0e0e0;
-  --accent:       #000000;
-  --accent-text:  #ffffff;
+  --accent:       #ffe600; /* Lemon color */
+  --accent-text:  #000000;
   
   --font-heading: 'Oswald', 'Impact', sans-serif;
   --font-body:    'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
@@ -46,6 +46,12 @@ body {
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a   { color: inherit; text-decoration: none; }
 
+/* ── Brand Accent ── */
+.brand-1g {
+  color: var(--accent);
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
 /* ── Custom Cursor ── */
 .custom-cursor {
   position: fixed;
@@ -59,14 +65,15 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .cursor-svg {
-  width: 20px;
-  height: 20px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .custom-cursor.hover .cursor-svg {
   transform: scale(1.2) rotate(-5deg);
+  filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.8));
 }
 
 /* ── Layout & Typography ── */
@@ -162,7 +169,7 @@ a   { color: inherit; text-decoration: none; }
   position: absolute;
   bottom: -4px; left: 0;
   width: 0; height: 1px;
-  background: var(--text);
+  background: var(--accent);
   transition: width 0.3s;
 }
 
@@ -215,8 +222,9 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .btn-solid:hover {
-  background: var(--bg);
+  background: var(--accent);
   color: var(--text);
+  border-color: var(--text);
 }
 
 /* ── Marquee (Thin style) ── */
@@ -226,13 +234,15 @@ a   { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--border);
   padding: 0.75rem 0;
   background: var(--surface);
+  white-space: nowrap;
 }
 
 .marquee-track {
-  display: flex;
+  display: inline-flex;
   gap: 3rem;
-  white-space: nowrap;
-  animation: marquee 25s linear infinite;
+  /* width: max-content ensures it doesn't wrap and shrink */
+  width: max-content;
+  animation: marquee 30s linear infinite;
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 500;
@@ -240,7 +250,11 @@ a   { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-@keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+/* For a seamless marquee, we translate exactly half of its max-content width */
+@keyframes marquee { 
+  0% { transform: translateX(0); } 
+  100% { transform: translateX(-50%); } 
+}
 
 /* ── Gallery (Exhibition) ── */
 .garage-feed {
@@ -262,11 +276,51 @@ a   { color: inherit; text-decoration: none; }
   }
 }
 
-.exhibit-frame {
+/* macOS Window Frame Style */
+.exhibit-frame-wrap {
   width: 100%;
-  border: 1px solid var(--border-soft);
-  padding: 0.5rem;
+  border: 1px solid var(--border);
   background: var(--surface-2);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.frame-bar {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.mac-dots {
+  display: flex;
+  gap: 6px;
+  margin-right: 1rem;
+}
+
+.bar-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.bar-dot.red { background: #ff5f56; }
+.bar-dot.yellow { background: #ffbd2e; }
+.bar-dot.green { background: #27c93f; }
+
+.bar-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.exhibit-frame {
+  padding: 0;
+  background: var(--bg);
 }
 
 .exhibit-img {
@@ -274,8 +328,7 @@ a   { color: inherit; text-decoration: none; }
   height: auto;
   max-height: 800px;
   object-fit: contain;
-  background: var(--bg);
-  border: 1px solid var(--border-soft);
+  display: block;
 }
 
 .exhibit-info {
@@ -336,45 +389,6 @@ a   { color: inherit; text-decoration: none; }
   text-align: right;
 }
 
-/* ── Services / Specs ── */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.service-item {
-  border: 1px solid var(--border);
-  padding: 2.5rem;
-  text-align: center;
-  transition: background 0.3s;
-}
-
-.service-item:hover {
-  background: var(--surface-2);
-}
-
-.service-num {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.service-title {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.service-desc {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
 /* ── Footer (LBWK Style) ── */
 .footer {
   text-align: center;
@@ -396,6 +410,11 @@ a   { color: inherit; text-decoration: none; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 .footer-nav span.div {
@@ -430,51 +449,6 @@ a   { color: inherit; text-decoration: none; }
   width: 14px; height: 14px;
 }
 
-.hours-table-wrap {
-  display: inline-block;
-  border: 1px dotted var(--text);
-  padding: 2rem;
-  margin-bottom: 4rem;
-  position: relative;
-}
-
-.hours-title {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--bg);
-  padding: 0 1rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: 1px solid var(--text);
-}
-
-.hours-table {
-  width: 100%;
-  min-width: 250px;
-  text-align: left;
-  font-size: 0.9rem;
-  border-collapse: collapse;
-}
-
-.hours-table td {
-  padding: 0.4rem 0;
-}
-
-.hours-table td:nth-child(2) {
-  text-align: right;
-  font-weight: 700;
-}
-
-.hours-table tr {
-  border-bottom: 1px dotted var(--border-soft);
-}
-.hours-table tr:last-child {
-  border-bottom: none;
-}
-
 .social-icons {
   display: flex;
   justify-content: center;
@@ -490,22 +464,17 @@ a   { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   color: var(--bg);
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .social-circle:hover {
   transform: scale(1.1);
+  background: var(--accent);
+  color: var(--text);
 }
 .social-circle svg {
   width: 20px; height: 20px;
   fill: currentColor;
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  color: var(--text-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 /* ── Reveal Animation ── */
@@ -523,6 +492,5 @@ a   { color: inherit; text-decoration: none; }
 @media (max-width: 600px) {
   .nav-links { display: none; }
   .section { padding: 4rem 0; }
-  .hours-table-wrap { width: 100%; padding: 1.5rem; }
   .footer-giant-logo { font-size: 3.5rem; }
 }
