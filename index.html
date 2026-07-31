@@ -1,199 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lemon1g — Graphic Designer. Cat illustrations, digital art, and bold character design." />
-  <title>Lemon1g — Graphic Designer & Illustrator</title>
+  <meta name="description" content="LEMON1G — LBWK Style Graphic Designer & Virtual Photographer. JDM Car Culture, Forza Horizon 6 Japan, Widebody Livery & Character Art." />
+  <title>LEMON1G · リバティーウォーク — LBWK Graphic Design & JDM Virtual Photography</title>
+  
+  <!-- Fonts: Space Grotesk (Tech/Industrial), Oswald (Heavy Automotive Caps), Noto Sans JP (Authentic Japanese Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Oswald:wght@500;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Custom cursor -->
+  <!-- Custom Cursor -->
   <div class="cur-dot"  id="curDot"></div>
   <div class="cur-ring" id="curRing"></div>
+
+  <!-- Background Grid & Atmospheric Noise -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
   <!-- ── NAV ── -->
   <header id="site-header">
     <nav class="nav container">
-      <a href="#" class="nav-logo">🍋 Lemon<span class="brand-1g">1g</span></a>
+      <a href="#" class="nav-logo">
+        <span class="logo-kanji">自由歩行</span>
+        <span class="logo-text">LEMON<span class="brand-1g">1G</span></span>
+        <span class="logo-tag">LBWK SPEC</span>
+      </a>
       <div class="nav-links">
-        <a href="#exhibition">Exhibition</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#garage"><span class="nav-kanji">画廊</span> GARAGE</a>
+        <a href="#specs"><span class="nav-kanji">仕様</span> SPECS</a>
+        <a href="#about"><span class="nav-kanji">概要</span> ABOUT</a>
+        <a href="#contact"><span class="nav-kanji">連絡</span> CONTACT</a>
       </div>
     </nav>
   </header>
 
   <main>
 
-    <!-- ── HERO ── -->
+    <!-- ── HERO (LBWK JDM STAGE) ── -->
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-eyebrow">Graphic Designer · Illustrator</p>
+          <div class="hero-stamps">
+            <span class="stamp-badge">TOKYO // JAPAN</span>
+            <span class="stamp-badge stamp-yellow">LB-WORKS STYLE</span>
+            <span class="stamp-badge">FH6 VP LAB</span>
+          </div>
+
           <h1 class="hero-title">
-            Art with attitude.<br/>
-            <em>Exhibited in full HD.</em>
+            <span class="hero-kanji">リバティーウォーク</span>
+            JDM CULTURE &<br/>
+            <span class="hero-yellow">DIGITAL ARTWORKS</span>
           </h1>
-          <p class="hero-sub">Bold character design, cat art, and digital illustrations. Doomscroll through the full exhibition below — no pages, no popups, just pure artwork.</p>
-          <a href="#exhibition" class="btn-primary">Explore Exhibition ↓</a>
+
+          <p class="hero-sub">
+            Liberty Walk inspired graphic design, Forza Horizon 6 virtual photography in Japan, widebody liveries, and iconic character art. Crafted with Japanese stance & underground motor culture.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#garage" class="btn-lbwk">
+              <span>EXPLORE GARAGE</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <div class="hero-spec-tag">
+              <span class="dot-live"></span> CHASSIS: LB-LM01 / JAPAN
+            </div>
+          </div>
         </div>
-        <div class="hero-deco" aria-hidden="true">
-          <div class="deco-ring deco-ring--1"></div>
-          <div class="deco-ring deco-ring--2"></div>
-          <div class="deco-dot"></div>
+
+        <!-- Telemetry / Spec Badge -->
+        <div class="hero-telemetry">
+          <div class="tele-box">
+            <span class="tele-label">ORIGIN</span>
+            <span class="tele-val">JAPAN // FH6</span>
+          </div>
+          <div class="tele-box">
+            <span class="tele-label">STYLE</span>
+            <span class="tele-val">LBWK WIDEBODY</span>
+          </div>
+          <div class="tele-box">
+            <span class="tele-label">FOCUS</span>
+            <span class="tele-val">VIRTUAL PHOTO & ART</span>
+          </div>
+          <div class="tele-kanji-vert">カスタムデザイン</div>
         </div>
       </div>
+
       <div class="scroll-hint" aria-hidden="true">
-        <span></span>Scroll To View
+        <span class="scroll-line"></span>
+        <span class="scroll-txt">SCROLL TO EXAMINE GARAGE</span>
       </div>
     </section>
 
-    <!-- ── MARQUEE ── -->
+    <!-- ── LBWK RACING TICKER ── -->
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee-track">
-        <span>Character Design</span><span class="sep">✦</span>
-        <span>Digital Illustration</span><span class="sep">✦</span>
-        <span>Cat Art Exhibition</span><span class="sep">✦</span>
-        <span>Photoshop Art</span><span class="sep">✦</span>
-        <span>Meme Culture</span><span class="sep">✦</span>
-        <span>Lemon1g Studio</span><span class="sep">✦</span>
-        <span>Character Design</span><span class="sep">✦</span>
-        <span>Digital Illustration</span><span class="sep">✦</span>
-        <span>Cat Art Exhibition</span><span class="sep">✦</span>
-        <span>Photoshop Art</span><span class="sep">✦</span>
-        <span>Meme Culture</span><span class="sep">✦</span>
-        <span>Lemon1g Studio</span><span class="sep">✦</span>
+        <span>リバティーウォーク</span><span class="sep">❖</span>
+        <span>LB-WORKS JAPAN</span><span class="sep">❖</span>
+        <span>DAIKOKU PA NIGHTS</span><span class="sep">❖</span>
+        <span>FORZA HORIZON 6 VIRTUAL PHOTOGRAPHY</span><span class="sep">❖</span>
+        <span>WIDEBODY LIVERY DESIGN</span><span class="sep">❖</span>
+        <span>CHARACTER ART STANCE</span><span class="sep">❖</span>
+        <span>自由歩行 モータースポーツ</span><span class="sep">❖</span>
+        <span>LB-WORKS JAPAN</span><span class="sep">❖</span>
+        <span>DAIKOKU PA NIGHTS</span><span class="sep">❖</span>
+        <span>FORZA HORIZON 6 VIRTUAL PHOTOGRAPHY</span><span class="sep">❖</span>
       </div>
     </div>
 
-    <!-- ── MUSEUM / ART SHOW DOOMSCROLL EXHIBITION ── -->
-    <section id="exhibition" class="section exhibition-section">
+    <!-- ── GARAGE / ART SHOW (LBWK ONE-PAGE FEED) ── -->
+    <section id="garage" class="section garage-section">
       <div class="container">
         <div class="section-header">
           <div>
-            <span class="section-label">Exhibition Hall</span>
-            <h2 class="section-title">The Art Collection.</h2>
+            <div class="section-kanji">車両展示 // ギャラリー</div>
+            <span class="section-label">LBWK SHOWROOM</span>
+            <h2 class="section-title">GARAGE EXHIBITION.</h2>
           </div>
-          <p class="exhibition-hint">Scroll down to view full high-definition artworks</p>
+          <div class="section-badge-right">
+            <span>FULL HD SHOTS</span>
+            <span class="yellow-txt">CHASSIS 01 - 03</span>
+          </div>
         </div>
 
-        <div class="exhibition-feed">
+        <div class="garage-feed">
 
-          <!-- EXHIBIT 01: FYOUCAT -->
-          <article class="exhibit-item reveal">
-            <header class="exhibit-header">
-              <div class="exhibit-meta">
-                <span class="exhibit-num">EXHIBIT NO. 01</span>
-                <span class="exhibit-badge">Featured</span>
+          <!-- LB-EXHIBIT 01 -->
+          <article class="lb-card reveal">
+            <header class="lb-card__header">
+              <div class="lb-card__tagline-row">
+                <span class="lb-code">LB-WORKS // NO. 01</span>
+                <span class="lb-tag-yellow">MAIN FEATURE</span>
+                <span class="lb-location">SHINJUKU, TOKYO · FH6</span>
               </div>
-              <h3 class="exhibit-title">FYOUCAT</h3>
-              <p class="exhibit-tagline">Rebellious cat with attitude — Self explanatory</p>
+              <h3 class="lb-card__title">
+                FYOUCAT <span class="title-sub">LB-WORKS EDITION</span>
+              </h3>
+              <p class="lb-card__desc">Rebellious feline character design fused with aggressive LBWK widebody aesthetics & stance culture.</p>
             </header>
 
-            <div class="exhibit-frame">
-              <img src="assets/images/cat1.png" alt="FYOUCAT Full HD Artwork" loading="lazy" class="exhibit-img" />
+            <div class="lb-card__frame">
+              <div class="frame-bar">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+                <span class="bar-title">LB_PHOTO_01_RAW_4K.PNG</span>
+              </div>
+              <img src="assets/images/cat1.png" alt="FYOUCAT LBWK Edition Full HD" loading="lazy" class="lb-img" />
+              <div class="frame-watermark">LB-WORKS · LEMON1G</div>
             </div>
 
-            <footer class="exhibit-body">
-              <div class="exhibit-story">
-                <h4>About The Piece</h4>
-                <p>FYOUCAT is the ultimate expression of feline sass and rebellion. This iconic middle-finger cat perfectly captures that "I don't care what you think" energy that cat owners know all too well. It's bold, unapologetic, and highly relatable.</p>
-                <p>Created using Adobe Photoshop, this piece combines realistic cat photography with bold graphic design. The high-contrast gesture makes a statement that's impossible to ignore.</p>
+            <footer class="lb-card__footer">
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CONCEPT & STORY</span>
+                <p>The flagship design embodying pure defiance and street attitude. Inspired by Liberty Walk's signature "Imagine all the people living life in peace" philosophy mixed with raw, unfiltered feline attitude. High contrast visuals crafted for maximum visual impact.</p>
               </div>
-              <div class="exhibit-details">
-                <div class="detail-group">
-                  <span class="detail-label">Design Elements</span>
-                  <div class="tags">
-                    <span class="tag">Kitty</span>
-                    <span class="tag">Rude</span>
-                    <span class="tag">Iconic</span>
-                    <span class="tag">Photoshop</span>
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CHASSIS & TECHNICAL SPECS</span>
+                <div class="spec-table">
+                  <div class="spec-row">
+                    <span class="spec-key">Category:</span>
+                    <span class="spec-val">Character Livery & Illustration</span>
                   </div>
-                </div>
-                <div class="detail-group">
-                  <span class="detail-label">Medium</span>
-                  <span class="detail-value">Digital Illustration & Photography Composite</span>
+                  <div class="spec-row">
+                    <span class="spec-key">Software:</span>
+                    <span class="spec-val">Photoshop / FH6 Photo Mode</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Style:</span>
+                    <span class="spec-val">LB-Works Stance / High Contrast</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Tags:</span>
+                    <div class="lb-tags">
+                      <span class="tag">RUDE</span>
+                      <span class="tag">LBWK</span>
+                      <span class="tag">ICONIC</span>
+                      <span class="tag">JDM</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </footer>
           </article>
 
-          <!-- EXHIBIT 02: SILLY CAT -->
-          <article class="exhibit-item reveal">
-            <header class="exhibit-header">
-              <div class="exhibit-meta">
-                <span class="exhibit-num">EXHIBIT NO. 02</span>
+          <!-- LB-EXHIBIT 02 -->
+          <article class="lb-card reveal">
+            <header class="lb-card__header">
+              <div class="lb-card__tagline-row">
+                <span class="lb-code">LB-WORKS // NO. 02</span>
+                <span class="lb-location">DAIKOKU PA · YOKOHAMA</span>
               </div>
-              <h3 class="exhibit-title">Silly Cat</h3>
-              <p class="exhibit-tagline">Derpy cat with tongue out — pure silly energy</p>
+              <h3 class="lb-card__title">
+                SILLY CAT <span class="title-sub">DAIKOKU NIGHT RUN</span>
+              </h3>
+              <p class="lb-card__desc">Derpy tongue-out character capture under neon streetlights — pure unfiltered Japanese car meet vibes.</p>
             </header>
 
-            <div class="exhibit-frame">
-              <img src="assets/images/cat2.png" alt="Silly Cat Full HD Artwork" loading="lazy" class="exhibit-img" />
+            <div class="lb-card__frame">
+              <div class="frame-bar">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+                <span class="bar-title">DAIKOKU_PA_NIGHT_RUN.PNG</span>
+              </div>
+              <img src="assets/images/cat2.png" alt="Silly Cat Daikoku Nights Full HD" loading="lazy" class="lb-img" />
+              <div class="frame-watermark">JDM VIRTUAL PHOTO · LEMON1G</div>
             </div>
 
-            <footer class="exhibit-body">
-              <div class="exhibit-story">
-                <h4>About The Piece</h4>
-                <p>Silly Cat captures that perfect moment of pure derpy bliss — tongue out, eyes crossed, living their best life. This illustration celebrates the goofy, unfiltered moments that make cats so endearing.</p>
-                <p>Created with Adobe Photoshop, this piece focuses on realistic texture and expression while maintaining a playful, humorous tone. Perfect for meme culture and anyone who loves silly cat content.</p>
+            <footer class="lb-card__footer">
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CONCEPT & STORY</span>
+                <p>Capturing the authentic atmosphere of Daikoku Parking Area at 2 AM — goofiness mid-run. Blending realistic lighting, bokeh, and vibrant colors with comedic character design that pops against the dark asphalt.</p>
               </div>
-              <div class="exhibit-details">
-                <div class="detail-group">
-                  <span class="detail-label">Design Elements</span>
-                  <div class="tags">
-                    <span class="tag">Bleh</span>
-                    <span class="tag">Silly</span>
-                    <span class="tag">Cute</span>
-                    <span class="tag">Meme Culture</span>
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CHASSIS & TECHNICAL SPECS</span>
+                <div class="spec-table">
+                  <div class="spec-row">
+                    <span class="spec-key">Category:</span>
+                    <span class="spec-val">Virtual Photography & Character</span>
                   </div>
-                </div>
-                <div class="detail-group">
-                  <span class="detail-label">Medium</span>
-                  <span class="detail-value">Digital Painting & Expression Art</span>
+                  <div class="spec-row">
+                    <span class="spec-key">Location:</span>
+                    <span class="spec-val">Forza Horizon 6 Japan Map</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Tone:</span>
+                    <span class="spec-val">Derpy Bliss / Tokyo Street</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Tags:</span>
+                    <div class="lb-tags">
+                      <span class="tag">BLEH</span>
+                      <span class="tag">SILLY</span>
+                      <span class="tag">DAIKOKU</span>
+                      <span class="tag">VP</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </footer>
           </article>
 
-          <!-- EXHIBIT 03: NERD CAT -->
-          <article class="exhibit-item reveal">
-            <header class="exhibit-header">
-              <div class="exhibit-meta">
-                <span class="exhibit-num">EXHIBIT NO. 03</span>
+          <!-- LB-EXHIBIT 03 -->
+          <article class="lb-card reveal">
+            <header class="lb-card__header">
+              <div class="lb-card__tagline-row">
+                <span class="lb-code">LB-WORKS // NO. 03</span>
+                <span class="lb-location">HAKONE TOUGE · MOUNTAIN PASS</span>
               </div>
-              <h3 class="exhibit-title">Nerd Cat</h3>
-              <p class="exhibit-tagline">Intellectual feline with attitude — WeLL aKsHuALLy</p>
+              <h3 class="lb-card__title">
+                NERD CAT <span class="title-sub">HAKONE SPEC</span>
+              </h3>
+              <p class="lb-card__desc">Feline intellectualism perched with glasses — "WeLL aKsHuALLy" telemetry & precision tuning.</p>
             </header>
 
-            <div class="exhibit-frame">
-              <img src="assets/images/cat3.png" alt="Nerd Cat Full HD Artwork" loading="lazy" class="exhibit-img" />
+            <div class="lb-card__frame">
+              <div class="frame-bar">
+                <span class="bar-dot red"></span>
+                <span class="bar-dot yellow"></span>
+                <span class="bar-dot green"></span>
+                <span class="bar-title">HAKONE_SPEC_NERDCAT.PNG</span>
+              </div>
+              <img src="assets/images/cat3.png" alt="Nerd Cat Hakone Spec Full HD" loading="lazy" class="lb-img" />
+              <div class="frame-watermark">LB-PERFORMANCE · LEMON1G</div>
             </div>
 
-            <footer class="exhibit-body">
-              <div class="exhibit-story">
-                <h4>About The Piece</h4>
-                <p>Nerd Cat embodies the know-it-all personality we've all encountered. With glasses perched perfectly and an expression that says "Well, actually...", this design captures the essence of feline intellectualism with a humorous twist.</p>
-                <p>This character was created for the internet's cat-loving community who appreciate cats with personality — capturing that unmistakable "I know better than you" vibe.</p>
+            <footer class="lb-card__footer">
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CONCEPT & STORY</span>
+                <p>Inspired by precision Touge racers and telemetry experts. Nerd Cat judges your line through the hairpin turn with complete analytical superiority. Designed with crisp graphic details and nerdy automotive flair.</p>
               </div>
-              <div class="exhibit-details">
-                <div class="detail-group">
-                  <span class="detail-label">Design Elements</span>
-                  <div class="tags">
-                    <span class="tag">Smart</span>
-                    <span class="tag">Nerd</span>
-                    <span class="tag">Glasses</span>
-                    <span class="tag">Character Design</span>
+              <div class="lb-card__spec-col">
+                <span class="spec-heading">CHASSIS & TECHNICAL SPECS</span>
+                <div class="spec-table">
+                  <div class="spec-row">
+                    <span class="spec-key">Category:</span>
+                    <span class="spec-val">Character Design & Graphics</span>
                   </div>
-                </div>
-                <div class="detail-group">
-                  <span class="detail-label">Medium</span>
-                  <span class="detail-value">Character Art & Digital Illustration</span>
+                  <div class="spec-row">
+                    <span class="spec-key">Setup:</span>
+                    <span class="spec-val">Precision Vector & Raster Details</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Vibe:</span>
+                    <span class="spec-val">Know-It-All Telemetry Judge</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-key">Tags:</span>
+                    <div class="lb-tags">
+                      <span class="tag">SMART</span>
+                      <span class="tag">NERD</span>
+                      <span class="tag">GLASSES</span>
+                      <span class="tag">TOUGE</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </footer>
@@ -203,45 +308,79 @@
       </div>
     </section>
 
-    <!-- ── ABOUT ── -->
+    <!-- ── SPECS / CAPABILITIES ── -->
+    <section id="specs" class="section specs-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kanji">技術仕様 // 能力</div>
+            <span class="section-label">LB-PERFORMANCE SPECS</span>
+            <h2 class="section-title">TECHNICAL CAPABILITIES.</h2>
+          </div>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-box reveal">
+            <span class="box-num">01</span>
+            <h4 class="box-title">VIRTUAL PHOTOGRAPHY</h4>
+            <p class="box-desc">Forza Horizon 6 Japan photo mode, custom lighting, camera angles, color grading, and automotive stance captures.</p>
+          </div>
+
+          <div class="spec-box reveal">
+            <span class="box-num">02</span>
+            <h4 class="box-title">WIDEBODY LIVERY DESIGN</h4>
+            <p class="box-desc">Liberty Walk inspired vinyl liveries, sponsor placement, Japanese typography, and custom racing aesthetics.</p>
+          </div>
+
+          <div class="spec-box reveal">
+            <span class="box-num">03</span>
+            <h4 class="box-title">CHARACTER ILLUSTRATION</h4>
+            <p class="box-desc">High-impact character art with expression and attitude, seamlessly integrated into automotive graphics.</p>
+          </div>
+
+          <div class="spec-box reveal">
+            <span class="box-num">04</span>
+            <h4 class="box-title">DIGITAL BRANDING</h4>
+            <p class="box-desc">Industrial JDM brand identity, typography, stickers, merchandise graphics, and digital media production.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT (LEMON1G LBWK PROFILE) ── -->
     <section id="about" class="section about-section">
       <div class="container about-inner">
         <div class="about-left reveal">
-          <span class="section-label">About The Artist</span>
-          <h2 class="section-title">Lemon1g Studio.<br/><em>Art with attitude.</em></h2>
+          <div class="section-kanji">デザイナーについて</div>
+          <span class="section-label">THE BUILDER</span>
+          <h2 class="section-title">LEMON<span class="brand-1g">1G</span><br/><span class="yellow-txt">STUDIO.</span></h2>
         </div>
         <div class="about-right reveal">
-          <p>I'm <strong>Lemon<span class="brand-1g">1g</span></strong> — a graphic designer and digital illustrator creating iconic character designs and cat art that speak louder than words.</p>
-          <p>My art lives at the intersection of bold illustration, internet culture, and high-impact visual storytelling. Everything is crafted with Adobe Photoshop, precision detail, and character personality.</p>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <span class="skill-icon">🎨</span>
-              <span>Illustration</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">🐱</span>
-              <span>Character Design</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">🖌️</span>
-              <span>Photoshop</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">⚡</span>
-              <span>Visual Branding</span>
-            </div>
+          <p class="lead-text">Driven by Japanese car culture, Liberty Walk widebody stance, and character art that refuses to be boring.</p>
+          <p>I am <strong>LEMON<span class="brand-1g">1G</span></strong> — a graphic designer and virtual photographer specializing in JDM-inspired digital art, Forza Horizon 6 captures set in Japan, and character designs with raw street attitude.</p>
+          <p>From the neon-lit highways of Tokyo to Daikoku PA car meets, every design is built with passion, precision, and bold stance aesthetics.</p>
+
+          <div class="garage-tags-row">
+            <span class="g-tag">LIBERTY WALK VIBES</span>
+            <span class="g-tag">FH6 JAPAN PHOTO MODE</span>
+            <span class="g-tag">ADOBE PHOTOSHOP</span>
+            <span class="g-tag">JDM CAR CULTURE</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── CONTACT ── -->
+    <!-- ── CONTACT (LBWK PIT LANE CTA) ── -->
     <section id="contact" class="section contact-section">
       <div class="container reveal">
-        <span class="section-label">Get In Touch</span>
-        <h2 class="contact-title">Have a project in mind?<br/><em>Let's create together.</em></h2>
-        <p class="contact-sub">Available for freelance character design, custom illustrations, and creative collaborations.</p>
-        <a href="mailto:hello@lemon1g.com" class="btn-primary btn-large">Say Hello 👋</a>
+        <div class="section-kanji">お問い合わせ // お気軽にどうぞ</div>
+        <span class="section-label">PIT STOP // WORK INQUIRIES</span>
+        <h2 class="contact-title">START A BUILD WITH<br/><span class="yellow-txt">LEMON1G.</span></h2>
+        <p class="contact-sub">Got a livery project, virtual photography commission, or graphic design in mind? Let's connect.</p>
+        <a href="mailto:hello@lemon1g.com" class="btn-lbwk btn-large">
+          <span>SEND MESSAGE</span>
+          <span class="btn-arrow">→</span>
+        </a>
       </div>
     </section>
 
@@ -250,8 +389,13 @@
   <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="footer-logo">🍋 Lemon<span class="brand-1g">1g</span></span>
-      <span class="footer-copy">© <span id="yr"></span> Lemon1g. All rights reserved.</span>
+      <div class="footer-left">
+        <span class="footer-logo">🍋 LEMON<span class="brand-1g">1G</span></span>
+        <span class="footer-sub">LIBERTY WALK & JDM DIGITAL STUDIO</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© <span id="yr"></span> LEMON1G. ALL RIGHTS RESERVED. · 自由歩行</span>
+      </div>
     </div>
   </footer>
 
