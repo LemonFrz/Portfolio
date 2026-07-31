@@ -8,7 +8,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none !important;
 }
 
 :root {
@@ -52,29 +51,6 @@ a   { color: inherit; text-decoration: none; }
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
-/* ── Custom Cursor ── */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 99999;
-  will-change: transform;
-  transform: translate3d(-100px, -100px, 0);
-  transition: opacity 0.2s ease, transform 0s linear;
-}
-
-.cursor-svg {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.custom-cursor.hover .cursor-svg {
-  transform: scale(1.2) rotate(-5deg);
-  filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.8));
-}
 
 /* ── Layout & Typography ── */
 .container {
