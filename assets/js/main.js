@@ -1,8 +1,5 @@
 /* ─── main.js ─── */
 
-// ── Year
-document.getElementById('yr').textContent = new Date().getFullYear();
-
 
 // ── Header Scroll State
 const header = document.getElementById('site-header');
