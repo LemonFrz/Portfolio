@@ -262,11 +262,15 @@ a   { color: inherit; text-decoration: none; }
   display: flex;
 }
 
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 .marquee-track {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee-scroll 25s linear infinite;
+  animation: marquee-scroll 35s linear infinite;
 }
 
 .marquee-group {
