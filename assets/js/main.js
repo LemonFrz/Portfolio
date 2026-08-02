@@ -20,7 +20,7 @@ const revealObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── Interactive Lightbox Modal with Zoom & Slider Controls ──
+// ── Interactive Lightbox Modal with Zoom & Native Scrollbar Controls ──
 const createLightbox = () => {
   const modal = document.createElement('div');
   modal.id = 'lightbox-modal';
@@ -28,16 +28,18 @@ const createLightbox = () => {
   modal.innerHTML = `
     <div class="lb-controls">
       <button id="lb-zoom-out" title="Zoom Out">-</button>
-      <input type="range" id="lb-slider" min="1" max="4" step="0.1" value="1" />
+      <input type="range" id="lb-slider" min="1" max="3" step="0.1" value="1" />
       <button id="lb-zoom-in" title="Zoom In">+</button>
       <span id="lb-scale-text">100%</span>
       <button id="lb-reset" title="Reset Zoom">RESET</button>
       <button id="lb-close" title="Close (Esc)">&times;</button>
     </div>
     <div class="lb-stage">
-      <img id="lb-img" src="" alt="Exhibit preview" />
+      <div class="lb-img-wrap">
+        <img id="lb-img" src="" alt="Exhibit preview" />
+      </div>
     </div>
-    <div class="lb-hint">Click image to toggle zoom • Scroll / Drag to pan</div>
+    <div class="lb-hint">Use slider/buttons to zoom • Scroll container to view full photo</div>
   `;
   document.body.appendChild(modal);
 
@@ -51,32 +53,24 @@ const createLightbox = () => {
   const stage = modal.querySelector('.lb-stage');
 
   let scale = 1;
-  let translateX = 0;
-  let translateY = 0;
-  let isDragging = false;
-  let startX = 0;
-  let startY = 0;
 
-  const updateTransform = () => {
-    img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  const updateZoom = () => {
+    img.style.width = `${scale * 100}%`;
     slider.value = scale;
     scaleText.textContent = `${Math.round(scale * 100)}%`;
-    img.style.cursor = scale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in';
   };
 
   const setScale = (newScale) => {
-    scale = Math.min(Math.max(newScale, 1), 4);
-    if (scale === 1) {
-      translateX = 0;
-      translateY = 0;
-    }
-    updateTransform();
+    scale = Math.min(Math.max(newScale, 1), 3);
+    updateZoom();
   };
 
   const openLightbox = (src, alt) => {
     img.src = src;
     img.alt = alt || 'Exhibit preview';
     setScale(1);
+    stage.scrollTop = 0;
+    stage.scrollLeft = 0;
     modal.classList.add('active');
   };
 
@@ -89,50 +83,18 @@ const createLightbox = () => {
   slider.addEventListener('input', (e) => setScale(parseFloat(e.target.value)));
 
   // Button controls
-  btnZoomIn.addEventListener('click', (e) => { e.stopPropagation(); setScale(scale + 0.5); });
-  btnZoomOut.addEventListener('click', (e) => { e.stopPropagation(); setScale(scale - 0.5); });
+  btnZoomIn.addEventListener('click', (e) => { e.stopPropagation(); setScale(scale + 0.4); });
+  btnZoomOut.addEventListener('click', (e) => { e.stopPropagation(); setScale(scale - 0.4); });
   btnReset.addEventListener('click', (e) => { e.stopPropagation(); setScale(1); });
   btnClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
 
-  // Click photo to toggle zoom (1x <-> 2.2x)
+  // Click photo to toggle zoom (1x <-> 2x)
   img.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (isDragging) return;
-    setScale(scale > 1.1 ? 1 : 2.2);
+    setScale(scale > 1.1 ? 1 : 2);
   });
 
-  // Mouse wheel zoom
-  stage.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    const delta = e.deltaY < 0 ? 0.2 : -0.2;
-    setScale(scale + delta);
-  }, { passive: false });
-
-  // Drag / Pan logic when zoomed in
-  stage.addEventListener('mousedown', (e) => {
-    if (e.target === img && scale > 1) {
-      isDragging = true;
-      startX = e.clientX - translateX;
-      startY = e.clientY - translateY;
-      img.style.cursor = 'grabbing';
-    }
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    translateX = e.clientX - startX;
-    translateY = e.clientY - startY;
-    updateTransform();
-  });
-
-  window.addEventListener('mouseup', () => {
-    if (isDragging) {
-      isDragging = false;
-      updateTransform();
-    }
-  });
-
-  // Close modal when clicking backdrop
+  // Close modal when clicking backdrop area around the photo container wrapper
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target === stage) {
       closeLightbox();
