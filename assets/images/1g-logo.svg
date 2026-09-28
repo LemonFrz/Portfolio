@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140">
+  <!-- Yellow highlight block behind the 1 -->
+  <rect x="4" y="8" width="62" height="82" rx="2" fill="#FFE600"/>
+  <!-- Bold sans-serif "1" -->
+  <text x="22" y="78" font-family="'Oswald','Impact','Arial Black',sans-serif" font-weight="700" font-size="88" fill="#0B0B0B" letter-spacing="-2">1</text>
+  <!-- Elegant italic serif "g" with tail -->
+  <text x="58" y="82" font-family="'Playfair Display','Georgia','Times New Roman',serif" font-weight="600" font-style="italic" font-size="96" fill="#0B0B0B">g</text>
+</svg>
