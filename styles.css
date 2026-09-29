@@ -27,8 +27,8 @@
   --lemon-deep: #B89F00;
 
   /* Typography */
-  --font-display: 'Oswald', 'Impact', 'Arial Black', sans-serif;
-  --font-body: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Space Mono', 'Courier New', monospace;
   --font-cn: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
@@ -228,10 +228,10 @@ a {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--ink);
   display: flex;
   align-items: center;
@@ -244,7 +244,7 @@ a {
   margin: 0 1px;
 }
 
-/* ── Inline 1g Logo (transparent PNG) ── */
+/* ── Inline 1g Logo (SVG format) ── */
 .logo-inline {
   display: inline-block;
   object-fit: contain;
@@ -252,18 +252,18 @@ a {
   position: relative;
 }
 
-/* Header size */
+/* Header/Nav logo size — WILL NOT touch your SVG file, only CSS */
 .logo-inline--nav {
-  height: 1.8em;
-  margin: 0 -0.4em;
-  top: 0.25em;
+  height: 1em;
+  margin: 0 0em;
+  top: 0.175em;
 }
 
-/* Hero size */
+/* Hero title logo size */
 .logo-inline--hero {
-  height: 1.7em;
-  margin: 0 -0.35em;
-  top: 0.63em;
+  height: 1em;
+  margin: 0 0.03em;
+  top: 0.267em;
 }
 
 .nav-links {
@@ -312,11 +312,11 @@ a {
 }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(3rem, 9vw, 8rem);
   font-weight: 700;
   line-height: 0.95;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--ink);
   margin-bottom: var(--sp-3);
 }
