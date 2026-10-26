@@ -28,14 +28,14 @@
     rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 
 <body>
 
   <!-- ── HEADER ── -->
   <header id="site-header">
-    <nav class="nav container">
+    <nav class="nav">
       <a href="#" class="nav-logo" aria-label="Lemon1g home">🍋 Lemon<img src="assets/images/1g-logo.svg" alt="1g"
           class="logo-inline logo-inline--nav" /></a>
       <div class="nav-links" role="navigation" aria-label="Main navigation">
@@ -45,7 +45,27 @@
         <a href="#contact">CONTACT</a>
       </div>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+        <line x1="3" y1="7" x2="21" y2="7"></line>
+        <line x1="3" y1="17" x2="21" y2="17"></line>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+    <div class="nav-mobile-links">
+      <a href="#gallery" class="nav-mobile-link"><span class="nav-mobile-num">01</span> GALLERY</a>
+      <a href="#about" class="nav-mobile-link"><span class="nav-mobile-num">02</span> ABOUT</a>
+      <a href="#experience" class="nav-mobile-link"><span class="nav-mobile-num">03</span> EXPERIENCE</a>
+      <a href="#contact" class="nav-mobile-link"><span class="nav-mobile-num">04</span> CONTACT</a>
+    </div>
+  </div>
 
   <main>
 
@@ -116,6 +136,12 @@
       <div class="container">
         <div class="section-label reveal">01 / GALLERY</div>
         <h2 class="section-heading reveal">EXHIBITION</h2>
+        <div class="gallery-filters reveal" role="tablist" aria-label="Filter works by category">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL (3)</button>
+          <button class="filter-btn" data-filter="Graphic Design" role="tab" aria-selected="false">GRAPHIC DESIGN</button>
+          <button class="filter-btn" data-filter="Virtual Photography" role="tab" aria-selected="false">VIRTUAL PHOTO</button>
+          <button class="filter-btn" data-filter="Poster Design" role="tab" aria-selected="false">POSTER DESIGN</button>
+        </div>
         <div id="gallery-feed" class="gallery-feed">
           <!-- Rendered by script.js from the works[] array -->
         </div>
@@ -155,6 +181,11 @@
               <li>Analytical Skills</li>
               <li>Microsoft Office</li>
             </ul>
+            <div class="about-action">
+              <a href="mailto:lemon.1gram@gmail.com?subject=Resume%20Request%20-%20Lemon1g" class="btn-cv">
+                REQUEST FULL CV / RESUME &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -222,7 +253,15 @@
         <div class="contact-links reveal">
           <div>
             <span class="contact-link-label">Email</span>
-            <a href="mailto:lemon.1gram@gmail.com" class="contact-link">lemon.1gram@gmail.com</a>
+            <div class="contact-email-row">
+              <a href="mailto:lemon.1gram@gmail.com" class="contact-link">lemon.1gram@gmail.com</a>
+              <button type="button" class="btn-copy-email" id="copy-email-btn" aria-label="Copy email address to clipboard" title="Copy email address">
+                <svg viewBox="0 0 24 24" class="copy-svg" width="14" height="14">
+                  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                </svg>
+                <span class="copy-status" id="copy-status">COPY</span>
+              </button>
+            </div>
           </div>
 
           <div class="social-container">
@@ -261,6 +300,7 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-copy">&copy; 2026 Lemon1g. All rights reserved.</p>
+      <p class="footer-hint">Tip: Press <kbd>G</kbd> to toggle the 12-column Swiss grid overlay</p>
     </div>
   </footer>
 
@@ -272,10 +312,18 @@
     <div class="lightbox-stage">
       <img class="lightbox-img" src="" alt="" />
     </div>
+    <div class="lightbox-info">
+      <div class="lightbox-meta">
+        <span class="lightbox-number" id="lightbox-number">01</span>
+        <span class="lightbox-divider">/</span>
+        <span class="lightbox-category" id="lightbox-category">GRAPHIC DESIGN</span>
+      </div>
+      <div class="lightbox-title" id="lightbox-title"></div>
+    </div>
     <div class="lightbox-counter"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 
 </html>
