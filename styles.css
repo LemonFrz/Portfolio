@@ -237,7 +237,8 @@ a {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   position: relative;
 }
 
@@ -251,12 +252,8 @@ a {
   align-items: center;
   gap: 0;
   line-height: 1;
-  position: absolute;
-  left: -52px;
-  /* Pulls it through the 24px container padding + 28px header padding */
-  top: 50%;
-  transform: translateY(-50%);
-  /* Keeps it perfectly vertically centered */
+  position: relative;
+  z-index: 2;
 }
 
 .nav-logo .hl-1g {
@@ -287,6 +284,10 @@ a {
 }
 
 .nav-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: var(--sp-4);
   align-items: center;
@@ -1335,10 +1336,7 @@ a {
   }
 
   .nav-logo {
-    position: static;
-    transform: none;
-    left: auto;
-    top: auto;
+    position: relative;
     font-size: 1.2rem;
   }
 
@@ -1348,6 +1346,10 @@ a {
 
   .nav-toggle {
     display: flex;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
   }
 
   .nav-mobile-menu {
